@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lil Cal</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -12,27 +13,75 @@
     </header>
     <main>
       <div class="cal-container">
-        <div class="output-div"></div>
-        <div class="symbol"><span><-</span></div>
+        <div class="output-div" id="output">output</div>
+        <div data-key="8" class="symbol">
+          <span class="backspace"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="55"
+              height="40"
+              viewBox="0 0 55 40"
+              fill="none"
+            >
+              <path
+                id="Vector 1"
+                d="M18.6191 1.80936C20.2092 0.826369 21.8722 0.926743 23.5713 1.14725C25.3128 1.37326 27.2168 1.74645 29.7256 1.66092L29.7344 1.65994H29.7432C34.0664 1.5885 41.5064 1.4835 45.5693 1.66092C47.5839 1.7489 49.142 1.88406 50.3154 2.16776C51.5016 2.45454 52.4444 2.92846 53.0498 3.80643C53.5628 4.55044 53.8371 5.45985 53.9053 6.24393C54.163 9.21123 53.9006 18.1585 53.0156 28.1346C52.8367 30.1518 53.0341 32.0099 53.0342 33.8328C53.0342 34.6942 52.986 35.5556 52.7773 36.3084C52.5632 37.0805 52.1581 37.8141 51.4004 38.2986C50.8306 38.6629 50.2141 38.8467 49.0547 38.9344C47.9235 39.0198 46.1587 39.021 43.2197 38.95C37.8285 38.8198 27.8241 38.5317 22.0849 38.1853C16.4224 37.8436 14.7256 37.459 13.3818 36.5545C12.7324 36.1173 12.2265 35.5836 11.8262 35.114C11.4887 34.7182 11.2804 34.4409 11.0801 34.2058L10.6494 33.7273C10.1245 33.1036 9.6552 32.2719 9.20897 31.3836C8.69421 30.3588 8.14279 29.1177 7.5537 27.864C6.35229 25.3072 4.91387 22.5236 2.87694 20.2674C2.70757 20.0798 2.51493 19.9687 2.31347 19.8846C2.20433 19.839 2.10934 19.8067 1.98339 19.7625C1.90971 19.7366 1.68133 19.6619 1.49315 19.531C1.38457 19.4555 1.2009 19.3033 1.08886 19.0428C0.963822 18.7517 0.986194 18.4641 1.06347 18.242C1.13118 18.0474 1.23883 17.9052 1.31054 17.8211C1.38803 17.7302 1.47339 17.6498 1.55175 17.5818C1.84139 17.3306 2.34774 16.9843 3.06151 16.5047C7.5455 13.4915 9.51369 11.3801 10.4336 10.0535C10.8873 9.39917 11.0975 8.92066 11.2305 8.58572C11.2859 8.44598 11.3684 8.21984 11.4414 8.06717C11.51 7.92366 11.6711 7.61409 12.0176 7.41776L12.0166 7.41678C13.2718 6.6753 14.5376 5.53975 15.6914 4.43631C16.2475 3.90442 16.8078 3.35014 17.2754 2.9119C17.7379 2.47843 18.2067 2.06438 18.6191 1.80936Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="19"
+              viewBox="0 0 22 19"
+              fill="none"
+            >
+              <path
+                id="Vector 2"
+                d="M1 1C1.1363 1 1.7858 1.27608 3.8221 2.72967C7.59629 5.97778 11.6534 9.35347 15.0352 12.0641C16.7473 13.5323 18.4511 15.1888 20 17"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="18"
+              viewBox="0 0 20 18"
+              fill="none"
+            >
+              <path
+                id="Vector 3"
+                d="M18.4124 1.41045C17.9723 1.79225 17.5322 2.17405 14.8709 4.49311C12.2097 6.81218 7.34066 11.0569 1.41238 16.4104"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+            </svg>
+          </span>
+        </div>
         <div class="clear"><span>AC</span></div>
-        <div class="symbol"><span>%</span></div>
-        <div class="symbol"><span>➗</span></div>
-        <div class="number"><span>7</span></div>
-        <div class="number"><span>8</span></div>
-        <div class="number"><span>9</span></div>
-        <div class="symbol"><span>X</span></div>
-        <div class="number"><span>4</span></div>
-        <div class="number"><span>5</span></div>
-        <div class="number"><span>6</span></div>
-        <div class="symbol"><span>-</span></div>
-        <div class="number"><span>1</span></div>
-        <div class="number"><span>2</span></div>
-        <div class="number"><span>3</span></div>
-        <div class="symbol"><span>+</span></div>
-        <div class="symbol"><span>+/-</span></div>
-        <div class="number"><span>0</span></div>
-        <div class="symbol"><span>.</span></div>
-        <div class="symbol"><span>=</span></div>
+        <div data-key="53" class="symbol"><kbd>%</kbd></div>
+        <div data-key="191" class="symbol"><kbd>&divide;</kbd></div>
+        <div data-key="55" class="number"><kbd>7</kbd></div>
+        <div data-key="56" class="number"><kbd>8</kbd></div>
+        <div data-key="57" class="number"><kbd>9</kbd></div>
+        <div data-key="56" class="symbol"><kbd>&times;</kbd></div>
+        <div data-key="52" class="number"><kbd>4</kbd></div>
+        <div data-key="53" class="number"><kbd>5</kbd></div>
+        <div data-key="54" class="number"><kbd>6</kbd></div>
+        <div data-key="189" class="symbol"><kbd>−</kbd></div>
+        <div data-key="49" class="number"><kbd>1</kbd></div>
+        <div data-key="50" class="number"><kbd>2</kbd></div>
+        <div data-key="51" class="number"><kbd>3</kbd></div>
+        <div data-key="187" class="symbol"><kbd>+</kbd></div>
+        <div data-key="" class="symbol"><kbd>+/−</kbd></div>
+        <div data-key="48" class="number"><kbd>0</kbd></div>
+        <div data-key="190" class="symbol"><kbd>.</kbd></div>
+        <div data-key="187" class="symbol"><kbd>=</kbd></div>
       </div>
     </main>
   </body>
